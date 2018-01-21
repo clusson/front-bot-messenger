@@ -1,0 +1,20 @@
+@import './materialize/materialize.scss';
+@import "../../node_modules/toastr/toastr.scss";
+@import "../../node_modules/senna/build/senna.css";
+
+a{
+    color:inherit !important; 
+}
+
+body {
+    background-color: lightgrey;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}

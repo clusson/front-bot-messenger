@@ -1,0 +1,65 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/sbin:/usr/local/share/phantomjs/bin:/Users/Alex/Desktop/RPI/tools-master/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin:/usr/local/share/activator-play:/usr/local/share/scala/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/sbin:/usr/local/share/phantomjs/bin:/Users/Alex/Desktop/RPI/tools-master/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin:/usr/local/share/activator-play:/usr/local/share/scala/bin:/opt/local/bin:/opt/local/sbin:/Users/Alex/Library/Android/sdk/tools:/Users/Alex/Library/Android/sdk/platform-tools:/Applications/SWI-Prolog.app/Contents/MacOS:/Users/Alex/Library/Android/sdk/tools:/Users/Alex/Library/Android/sdk/platform-tools:/Applications/SWI-Prolog.app/Contents/MacOS
+
+Yarn version: 
+  0.23.4
+
+Node version: 
+  9.3.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+      "name": "front-amiral",
+      "version": "1.0.0",
+      "description": "front-amiral",
+      "main": "main.js",
+      "scripts": {
+          "watch": "webpack --progress --colors --watch --config webpack.dev.js",
+          "build": "webpack --progress --colors --config webpack.dev.js",
+          "build-prod": "webpack --progress --colors --config webpack.prod.js"
+      },
+      "author": "front-amiral",
+      "license": "BSD-3-CLAUSE",
+      "devDependencies": {
+          "babel-cli": "^6.24.1",
+          "css-loader": "^0.27.3",
+          "eslint": "^3.17.1",
+          "jsdom": "10.0.0",
+          "jsdom-global": "2.1.1",
+          "node-sass": "^4.5.2",
+          "sass-loader": "^6.0.3",
+          "style-loader": "^0.15.0"
+      },
+      "dependencies": {
+          "babel-cli": "^6.24.1",
+          "babel-core": "^6.23.1",
+          "babel-loader": "^6.3.2",
+          "babel-preset-env": "^6.22.0",
+          "chaudron": "^1.6.5",
+          "copy-webpack-plugin": "^4.1.1",
+          "jquery": "^3.2.1",
+          "knockout": "^3.4.2",
+          "lodash": "^4.17.4",
+          "materialize-css": "^0.99.0",
+          "moment": "^2.19.1",
+          "space-lift": "^0.6.3",
+          "toastr": "^2.1.2",
+          "uglifyjs-webpack-plugin": "^1.1.2",
+          "webpack": "^2.4.1"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EACCES: permission denied, open '/Users/Alex/Library/Caches/Yarn/v1/npm-fsevents-1.1.3-11f82318f5fe7bb2cd22965a108e9306208216d8/.yarn-metadata.json'
