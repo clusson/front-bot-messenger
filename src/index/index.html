@@ -15,6 +15,23 @@
         <div class="row">
             <div class="col m8 offset-m2">
                 <div data-bind="text : test"> </div>
+                <hr>
+                <h3>Two-ways bindings example : </h3>
+                <input type="number" data-bind="textInput : num" />
+                <br>
+                <b>Your number : </b>
+                <br>
+                <p data-bind="text : num"></p>
+                <br>
+                <b>Your number x2</b>
+                <br>
+                <p data-bind="text : num2"></p>
+                <hr>
+                <h3>Arrays : </h3>
+                <div data-bind="foreach : array">
+                    <b data-bind="text : nom"></b>
+                    <br>
+                </div>
             </div>
         </div>
 
