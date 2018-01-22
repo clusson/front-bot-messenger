@@ -1,6 +1,6 @@
 import { IndexViewModel } from './index/IndexViewModel'
 import { Framework } from 'chaudron'
-import { config } from '../config'
+
 window.onload = () => {
 
     const routes = [{
@@ -14,9 +14,7 @@ window.onload = () => {
     const app = {
         viewModels: routes,
         entryPoint: 'index.html',
-        global: [{
-            api: () => config.API
-        }]
+        global: []
     }
     Framework.create(app)
 }

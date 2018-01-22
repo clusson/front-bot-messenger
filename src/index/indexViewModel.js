@@ -1,7 +1,7 @@
 'use strict'
 import { ViewModelBase } from 'chaudron'
 import ko from 'knockout'
-import toastr from 'toastr'
+
 
 export class IndexViewModel extends ViewModelBase {
 
