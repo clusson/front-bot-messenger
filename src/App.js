@@ -1,5 +1,6 @@
 import { IndexViewModel } from './index/IndexViewModel'
 import { Framework } from 'chaudron'
+export * from './scss/app.scss'
 
 window.onload = () => {
 
