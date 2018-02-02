@@ -26,21 +26,29 @@
                 <div class="row">
                     <h4>Luis</h4>
                     <div class="input-field col s3">
-                        <input id="luis_url" type="text" class="validate">
+                        <input id="luis_url" data-bind="textInput : luis_url" type="text" class="validate">
                         <label for="luis_url">Resource endpoint</label>
                     </div>
                     <div class="input-field col s1">
-                        <input id="version_id" type="text" class="validate">
+                        <input id="version_id" data-bind="textInput : version_id" type="text" class="validate">
                         <label for="version_id">Version ID</label>
                     </div>
                     <div class="input-field col s3">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Récupérer les intents
+                        <button class="btn waves-effect waves-light" data-bind="click : synchronise" type="submit" name="action">Récupérer les intents
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
                 </div>
             </form>
-            <ul data-bind="foreach: intents">
+            <div data-bind="if: !apiIntents">
+                <p>Aucun résultat trouvé</p>
+            </div>
+            <ul data-bind="foreach: apiIntents">
+                <li>
+                    <span data-bind="text: name"></span>
+                </li>
+            </ul>
+            <ul data-bind="foreach: luisIntents">
                 <li>
                     <span data-bind="text: name"></span>
                 </li>

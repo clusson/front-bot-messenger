@@ -1,6 +1,7 @@
 'use strict'
 import { ViewModelBase } from 'chaudron'
 import { intentService } from '../services/intentService'
+import { luisService } from '../services/luisService'
 import ko from 'knockout'
 
 export class CreateViewModel extends ViewModelBase {
@@ -9,17 +10,22 @@ export class CreateViewModel extends ViewModelBase {
         super()
     }
     synchronise() {
-
+        luisService.getIntents(this.luis_url(), this.version_id()).then(res => {
+            this.luisIntents = res
+        }
+        )
     }
     loadData() {
         return intentService.getIntents().then(res => {
-            this.intents = res
+            this.apiIntents = res
         }
         )
     }
     loadViewModel() {
-        this.num = ko.observable(0)
-        this.res = ko.observableArray(this.intents)
+        this.luis_url = ko.observable()
+        this.version_id = ko.observable()
+        this.apiIntents = ko.observableArray(this.apiIntents)
+        this.luisIntents = ko.observableArray(this.luisIntents)
     }
 
 

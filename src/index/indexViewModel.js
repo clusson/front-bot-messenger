@@ -15,9 +15,7 @@ export class IndexViewModel extends ViewModelBase {
         })
     }
     loadViewModel() {
-        this.num = ko.observable(0)
-        this.num2 = ko.pureComputed(() => this.num() * 2)
-        this.array = ko.observableArray([{ nom: 'coucou' }, { nom: 'lol' }])
+
     }
 
 }
