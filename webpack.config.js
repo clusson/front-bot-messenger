@@ -1,6 +1,7 @@
 'use strict'
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path')
+const webpack = require('webpack')
 // const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const BUILD_DIR = path.resolve(__dirname, 'www')
 const APP_DIR = path.resolve(__dirname, 'src')
@@ -34,6 +35,11 @@ const config = {
             { from: APP_DIR + '/**/*.png', to: 'img', flatten: true },
             { from: APP_DIR + '/**/*.jpg', to: 'img', flatten: true }
         ]),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        })
     ]
 }
 module.exports = config

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" data-senna-track="permanent" src="bundle.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta charset="UTF-8">
+    <title>Thoune</title>
+</head>
+
+<body data-senna>
+    <div data-senna-surface id="content">
+        <div class="row">
+            <form class="col s12">
+                <div class="section">
+                    <h3>Créer votre bot</h3>
+                </div>
+                <div class="row">
+                    <h4>Facebook</h4>
+                    <div class="input-field col s3">
+                        <input id="facebook_id" type="text" class="validate">
+                        <label for="facebook_id">ID Facebook</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>Luis</h4>
+                    <div class="input-field col s3">
+                        <input id="luis_url" type="text" class="validate">
+                        <label for="luis_url">Resource endpoint</label>
+                    </div>
+                    <div class="input-field col s1">
+                        <input id="version_id" type="text" class="validate">
+                        <label for="version_id">Version ID</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Récupérer les intents
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ul data-bind="foreach: intents">
+                <li>
+                    <span data-bind="text: name"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

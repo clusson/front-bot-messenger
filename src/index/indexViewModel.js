@@ -20,5 +20,4 @@ export class IndexViewModel extends ViewModelBase {
         this.array = ko.observableArray([{ nom: 'coucou' }, { nom: 'lol' }])
     }
 
-
 }
