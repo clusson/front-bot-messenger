@@ -12,34 +12,38 @@
 <body data-senna>
     <div data-senna-surface id="content">
         <div class="row">
-            <form class="col s12">
-                <div class="section">
-                    <h3>Créer votre bot</h3>
+            <div class="section">
+
+                <h3>Créer votre bot</h3>
+            </div>
+            <div class="row">
+                <h4>Facebook</h4>
+                <div class="input-field col s3">
+                    <input id="facebook_id" type="text" class="validate">
+                    <label for="facebook_id">ID Facebook</label>
                 </div>
-                <div class="row">
-                    <h4>Facebook</h4>
-                    <div class="input-field col s3">
-                        <input id="facebook_id" type="text" class="validate">
-                        <label for="facebook_id">ID Facebook</label>
-                    </div>
+            </div>
+            <div class="row">
+                <h4>Luis</h4>
+                <div class="input-field col s3">
+                    <input id="luis_url" data-bind="textInput : luis_url" type="text" class="validate">
+                    <label for="luis_url">Resource endpoint</label>
                 </div>
-                <div class="row">
-                    <h4>Luis</h4>
-                    <div class="input-field col s3">
-                        <input id="luis_url" data-bind="textInput : luis_url" type="text" class="validate">
-                        <label for="luis_url">Resource endpoint</label>
-                    </div>
-                    <div class="input-field col s1">
-                        <input id="version_id" data-bind="textInput : version_id" type="text" class="validate">
-                        <label for="version_id">Version ID</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <button class="btn waves-effect waves-light" data-bind="click : synchronise" type="submit" name="action">Récupérer les intents
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
+                <div class="input-field col s1">
+                    <input id="version_id" data-bind="textInput : version_id" type="text" class="validate">
+                    <label for="version_id">Version ID</label>
                 </div>
-            </form>
+                <div class="input-field col s3">
+                    <button class="btn waves-effect waves-light" data-bind="click : synchronise" type="submit" name="action">Récupérer les intents
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <h4>Intents</h4>
             <div data-bind="if: !apiIntents">
                 <p>Aucun résultat trouvé</p>
             </div>
@@ -54,7 +58,6 @@
                 </li>
             </ul>
         </div>
-    </div>
 </body>
 
 </html>
