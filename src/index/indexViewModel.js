@@ -37,9 +37,9 @@ export class IndexViewModel extends ViewModelBase {
             mail: this.mailLogin(),
             password: this.passwordLogin()
         }).then(response => {
-            sessionStorage.setItem('userid', response)
+            sessionStorage.setItem('userid', this.mailLogin())
         }).then(() => {
-            //   window.location.href = 'create.html'
+            window.location.href = 'create.html'
         }).catch(() => {
             toastr.warning('Mauvais nom d\'utilisateur ou mots de passe')
         })

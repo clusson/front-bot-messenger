@@ -20,7 +20,7 @@ window.onload = () => {
         entryPoint: 'index.html',
         config: { vmContainer: 'body' },
         global: [{
-            api: () => 'http://localhost:9000'
+            api: () => 'https://api.hurrycane.fr'
         }]
     }
     Framework.create(app)
