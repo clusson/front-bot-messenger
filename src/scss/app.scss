@@ -1,9 +1,9 @@
 @import './materialize/materialize.scss';
 @import "../../node_modules/toastr/toastr.scss";
 @import "../../node_modules/senna/build/senna.css";
-
-a{
-    color:inherit !important; 
+@import "index.scss";
+a {
+    color: inherit !important;
 }
 
 body {
@@ -18,36 +18,53 @@ h5 {
     font-size: 18px;
     margin-bottom: 20px;
 }
+
 .addBot {
     margin-top: 0% auto !important;
     float: right;
 }
 
-  /* label color */
-  .input-field label {
+
+/* label color */
+
+.input-field label {
     color: #000;
-  }
-  /* label focus color */
-  .input-field input[type=text]:focus + label {
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
     color: #000;
-  }
-  /* label underline focus color */
-  .input-field input[type=text]:focus {
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* valid color */
-  .input-field input[type=text].valid {
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* invalid color */
-  .input-field input[type=text].invalid {
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
     color: #000;
-  }
-      
+}

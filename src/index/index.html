@@ -9,22 +9,95 @@
     <title>Thoune</title>
 </head>
 
-<body data-senna>
+<body data-senna id="body">
+    <div data-senna-surface id="nav">
+        <nav>
+            <div class="nav-wrapper ">
+                <a href="index.html" class="brand-logo">Thoune</a>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <div class="white-text input-field col s6 offset-s1">
+                            <input id="mailLogin" name="mailLogin" type="text" data-bind="textInput : mailLogin">
+                            <label class="grey-text" for="mailLogin">Email</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="white-text input-field col s6 offset-s1">
+                            <input id="passwordLogin" name="passwordLogin" type="password" data-bind="textInput : passwordLogin">
+                            <label class="grey-text" for="passwordLogin">Password</label>
+                        </div>
+                    </li>
+
+                    <li><button class="waves-effect waves-light btn" data-bind="click : connexion">Se connecter</button></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
     <div data-senna-surface id="content">
+        <div class="top"></div>
+
         <div class="row">
-            <div class="s12 m4 l8">
-                <h3>Accueil
-                    <div class="addBot">
-                        <h5>Créer votre BOT
-                            <a class="btn-floating btn-large waves-effect waves-light red" href="create.html">
-                                <i class="material-icons">add</i>
-                            </a>
-                        </h5>
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Créer votre Thoune en quelques clic</span>
+                        <div class="row">
+
+                            <div class="col s6">
+                                <div class="input-field col s10 offset-s1">
+                                    <input id="mail" name="mail" type="text" data-bind="textInput : mail">
+                                    <label for="mail">Votre e-mail</label>
+                                </div>
+                                <div class="input-field col s10 offset-s1">
+                                    <input id="nom" name="nom" type="text" data-bind="textInput : nom">
+                                    <label for="nom">Votre nom</label>
+                                </div>
+                                <div class="input-field col s10 offset-s1">
+                                    <input id="prenom" name="prenom" type="text" data-bind="textInput : prenom">
+                                    <label for="prenom">Votre prénom</label>
+                                </div>
+                                <div class="input-field col s10 offset-s1">
+                                    <input id="password" name="password" type="password" data-bind="textInput : password">
+                                    <label for="password">Mots de passe</label>
+                                </div>
+                            </div>
+
+                            <div class="col s6">
+                                <div class="input-field col s8 offset-s1">
+                                    <input id="luis" name="luis" type="text" data-bind="textInput : luis">
+                                    <label for="luis">URL de Luis</label>
+                                </div>
+                                <div class="input-field col s2">
+                                    <input id="vLuis" name="vLuis" type="text" data-bind="textInput : vLuis">
+                                    <label for="vLuis">Version de Luis</label>
+                                </div>
+                                <div class="input-field col s10 offset-s1">
+                                    <input id="facebookId" name="facebookId" type="text" data-bind="textInput : facebookId">
+                                    <label for="facebookId">ID de votre page Facebook</label>
+                                </div>
+                                <div class="input-field col s10 offset-s1">
+                                    <input id="verifyToken" name="verifyToken" type="text" data-bind="textInput : verifyToken">
+                                    <label for="verifyToken">Verify-Token</label>
+                                </div>
+                                <div class="input-field col s10 offset-s1">
+                                    <input id="accessToken" name="accessToken" type="text" data-bind="textInput : accessToken">
+                                    <label for="accessToken">Access-Token</label>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                </h3>
+                    <div class="card-action">
+                        <a data-bind="click : register">Créer mon bot maintenant ! </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 
 

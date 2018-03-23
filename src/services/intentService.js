@@ -5,8 +5,9 @@ export const intentService = {
 
     getIntents() {
         return fetch(Global.api + '/intent', {
-            method: 'GET'
-        })
+                method: 'GET',
+                credentials: 'include'
+            })
             .then(response => checkStatus({
                 200: (element) => element.json()
             }, response))
